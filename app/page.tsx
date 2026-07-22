@@ -1,4 +1,4 @@
-import { ArrowLeft, CarFront, CloudCog, Code2, ExternalLink, Github, Layers3, PawPrint, ShieldCheck, type LucideIcon } from "lucide-react";
+import { ArrowLeft, CarFront, CloudCog, Code2, ExternalLink, GitBranch, Layers3, PawPrint, ShieldCheck, type LucideIcon } from "lucide-react";
 
 const repos = [
   { name: "API Contracts", repo: "api-contracts", desc: "فضای انتشار OpenAPI، AsyncAPI، Schema و مجموعه‌های Postman", status: "در حال تدوین" },
@@ -39,7 +39,7 @@ export default function Home() {
         <nav aria-label="ناوبری اصلی">
           <a href="#platform">پلتفرم</a><a href="#solutions">راهکارها</a><a href="#developers">توسعه‌دهندگان</a><a href="#vision">چشم‌انداز</a>
         </nav>
-        <a className="header-cta" href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer"><Github aria-hidden="true" size={17} strokeWidth={1.8} /> GitHub <ExternalLink aria-hidden="true" size={13} /></a>
+        <a className="header-cta" href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer"><GitBranch aria-hidden="true" size={17} strokeWidth={1.8} /> GitHub <ExternalLink aria-hidden="true" size={13} /></a>
       </header>
 
       <section className="hero shell">
