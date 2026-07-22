@@ -7,9 +7,10 @@ export const metadata: Metadata = {
     default: "CoreLink Platform | زیرساخت محصولات هوشمند",
     template: "%s | CoreLink Platform",
   },
-  description: "زیرساخت اتصال و یکپارچه‌سازی محصولات هوشمند؛ API، SDK و پلتفرم چندمستاجری برای خودرو، ردیاب حیوانات، IoT و راهکارهای White-label.",
+  description: "CoreLink پلتفرمی در حال توسعه برای اتصال و یکپارچه‌سازی محصولات هوشمند، با تمرکز بر معماری چندمستاجری، راهکارهای White-label و APIهای سازمانی است.",
   other: {
     "codex-preview": "development",
+    "theme-color": "#0B1F3A",
   },
   icons: {
     icon: "/favicon.svg",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "CoreLink Platform",
-    description: "هسته‌ی اتصال و یکپارچه‌سازی محصولات هوشمند",
+    description: "پلتفرم در حال توسعه برای اتصال دستگاه‌ها، داده‌ها و محصولات White-label",
     url: "https://corelinkplatform.ir",
     siteName: "CoreLink Platform",
     locale: "fa_IR",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CoreLink Platform",
-    description: "Connected product infrastructure for devices, applications, and digital services.",
+    description: "A connected-product platform in development for devices, data, white-label applications, and enterprise integrations.",
   },
 };
 
