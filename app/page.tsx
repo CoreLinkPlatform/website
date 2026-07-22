@@ -1,10 +1,10 @@
 const repos = [
-  { name: "API Contracts", repo: "api-contracts", desc: "OpenAPI، AsyncAPI، Schema و قراردادهای پایدار" },
-  { name: "Python SDK", repo: "sdk-python", desc: "یکپارچه‌سازی سرویس‌ها و اتوماسیون با Python" },
-  { name: "Java SDK", repo: "sdk-java", desc: "اتصال سامانه‌های سازمانی و اپلیکیشن‌های Java" },
-  { name: "CoreLink CLI", repo: "cli", desc: "ابزار خط فرمان برای توسعه و عملیات" },
-  { name: "MCP Server", repo: "mcp-server", desc: "اتصال عامل‌های هوشمند به قابلیت‌های پلتفرم" },
-  { name: "Mock Server", repo: "mock-server", desc: "توسعه و تست مستقل از محیط عملیاتی" },
+  { name: "API Contracts", repo: "api-contracts", desc: "فضای انتشار OpenAPI، AsyncAPI، Schema و مجموعه‌های Postman", status: "در حال تدوین" },
+  { name: "Python SDK", repo: "sdk-python", desc: "SDK برنامه‌ریزی‌شده برای سرویس‌ها و اتوماسیون Python", status: "برنامه‌ریزی‌شده" },
+  { name: "Java SDK", repo: "sdk-java", desc: "SDK برنامه‌ریزی‌شده برای Java و سامانه‌های سازمانی", status: "برنامه‌ریزی‌شده" },
+  { name: "CoreLink CLI", repo: "cli", desc: "ابزار خط فرمان برنامه‌ریزی‌شده برای توسعه و عملیات", status: "برنامه‌ریزی‌شده" },
+  { name: "MCP Server", repo: "mcp-server", desc: "مسیر پیشنهادی اتصال عامل‌های هوشمند به قابلیت‌های CoreLink", status: "برنامه‌ریزی‌شده" },
+  { name: "Mock Server", repo: "mock-server", desc: "شبیه‌ساز برنامه‌ریزی‌شده برای توسعه و تست مستقل", status: "برنامه‌ریزی‌شده" },
 ];
 
 const Icon = ({ name }: { name: "car" | "pet" | "layers" | "code" | "cloud" | "shield" }) => {
@@ -19,8 +19,12 @@ const Icon = ({ name }: { name: "car" | "pet" | "layers" | "code" | "cloud" | "s
   return <svg viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>;
 };
 
+function BrandSymbol({ className = "" }: { className?: string }) {
+  return <img className={className} src="/brand/corelink-symbol.svg" width="160" height="160" alt="" aria-hidden="true" />;
+}
+
 function Logo() {
-  return <a className="brand" href="#top" aria-label="CoreLink Platform — صفحه اصلی"><span className="brand-mark"><i /><b /></span><span><strong>CoreLink</strong><small>PLATFORM</small></span></a>;
+  return <a className="brand" href="#top" aria-label="CoreLink — صفحه اصلی"><BrandSymbol className="brand-symbol" /><span className="wordmark"><strong>Core<span>Link</span></strong><small>زیرساخت اتصال و یکپارچه‌سازی محصولات هوشمند</small></span></a>;
 }
 
 export default function Home() {
@@ -38,7 +42,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span /> Connected Product Infrastructure</div>
           <h1>هسته‌ی اتصال و یکپارچه‌سازی <em>محصولات هوشمند</em></h1>
-          <p>یک زیرساخت واحد برای اتصال دستگاه‌ها، مدیریت داده و ساخت تجربه‌های White-label؛ از خودرو و ناوگان تا ردیاب حیوانات و محصولات IoT.</p>
+          <p>CoreLink یک پلتفرم در حال توسعه برای اتصال دستگاه‌ها، یکپارچه‌سازی داده و ساخت محصولات White-label است؛ با تمرکز نخست بر خودرو و ناوگان و مسیر توسعه برای ردیاب حیوانات و دیگر محصولات IoT.</p>
           <div className="actions">
             <a className="button primary" href="#developers">شروع برای توسعه‌دهندگان <span>←</span></a>
             <a className="button secondary" href="#platform">معرفی پلتفرم</a>
@@ -49,7 +53,7 @@ export default function Home() {
         <div className="core-visual" aria-label="نمودار اتصال محصولات به هسته CoreLink">
           <div className="world-grid" />
           <div className="orbit o1" /><div className="orbit o2" /><div className="orbit o3" />
-          <div className="core"><span className="brand-mark large"><i /><b /></span><small>CORE</small></div>
+          <div className="core"><BrandSymbol className="core-symbol" /><small>CORELINK</small></div>
           <div className="node vehicle"><span><Icon name="car" /></span><b>Vehicle</b><small>Telemetry</small></div>
           <div className="node pet"><span><Icon name="pet" /></span><b>Pet Tracker</b><small>Location</small></div>
           <div className="node apps"><span><Icon name="layers" /></span><b>White-label</b><small>Applications</small></div>
@@ -60,10 +64,10 @@ export default function Home() {
       </section>
 
       <div className="trust shell">
-        <div><Icon name="code" /><span><b>API-first</b><small>قراردادهای پایدار</small></span></div>
-        <div><Icon name="layers" /><span><b>Multi-tenant</b><small>تفکیک کامل مشتریان</small></span></div>
-        <div><Icon name="shield" /><span><b>Enterprise-ready</b><small>کنترل، امنیت و مقیاس</small></span></div>
-        <div><Icon name="cloud" /><span><b>Flexible deployment</b><small>SaaS · White-label · On-prem</small></span></div>
+        <div><Icon name="code" /><span><b>API-first</b><small>طراحی قراردادمحور</small></span></div>
+        <div><Icon name="layers" /><span><b>Multi-tenant</b><small>معماری چندمستاجری</small></span></div>
+        <div><Icon name="shield" /><span><b>White-label</b><small>برند و تجربه مستقل</small></span></div>
+        <div><Icon name="cloud" /><span><b>Flexible deployment</b><small>مسیر SaaS و استقرار اختصاصی</small></span></div>
       </div>
 
       <section className="problem shell section" id="platform">
@@ -79,17 +83,17 @@ export default function Home() {
       </section>
 
       <section className="solutions section shell" id="solutions">
-        <div className="section-heading"><div><div className="section-label">محصولات متصل، یک هسته <span>02</span></div><h2>یک پلتفرم؛ چند مسیر بازار</h2></div><p>CoreLink زیرساخت مشترک را حفظ می‌کند و اجازه می‌دهد هر بازار، تجربه و مدل کسب‌وکار خودش را داشته باشد.</p></div>
+        <div className="section-heading"><div><div className="section-label">محصولات متصل، یک هسته <span>02</span></div><h2>یک پلتفرم؛ چند مسیر بازار</h2></div><p>هدف CoreLink جداکردن قابلیت‌های مشترک زیرساخت از تجربه‌ی هر بازار است؛ تا هر محصول بتواند برند، قواعد و مدل کسب‌وکار خودش را داشته باشد.</p></div>
         <div className="solution-grid">
-          <article className="solution-card featured"><div className="card-top"><span className="icon-box"><Icon name="car" /></span><small>Mobility</small></div><h3>خودرو و ناوگان متصل</h3><p>دریافت تله‌متری، موقعیت و رویداد؛ مدیریت دستگاه و فرمان؛ ساخت پنل عملیات و تجربه‌ی راننده بدون وابستگی به یک پروتکل خاص.</p><ul><li>ردیابی و Geofence</li><li>رویداد و هشدار</li><li>ویدئو و رسانه</li><li>یکپارچه‌سازی سازمانی</li></ul><div className="card-art car-art"><i /><span>35.7219° N</span><b>Online</b></div></article>
-          <article className="solution-card"><div className="card-top"><span className="icon-box"><Icon name="pet" /></span><small>Pet Tech</small></div><h3>ردیاب و خدمات حیوانات</h3><p>زیرساخت قابل توسعه برای ردیاب‌های حیوانات خانگی و شهری؛ از موقعیت زنده تا پرونده، مراقبت جمعی و سرویس‌های مبتنی بر مکان.</p><ul><li>موقعیت و محدوده امن</li><li>پروفایل حیوان</li><li>شبکه مراقبان</li><li>API برای شرکا</li></ul><div className="card-art pet-art"><span>LIAM</span><i>●</i><b>Safe zone</b></div></article>
-          <article className="solution-card"><div className="card-top"><span className="icon-box"><Icon name="layers" /></span><small>B2B2C</small></div><h3>محصول و اپلیکیشن White-label</h3><p>هر شریک تجاری با برند، دامنه، قوانین و تجربه‌ی خودش؛ روی یک هسته‌ی مشترک با تفکیک داده و عملیات.</p><ul><li>برند و تجربه اختصاصی</li><li>Tenant مستقل</li><li>نقش و دسترسی</li><li>SaaS یا استقرار اختصاصی</li></ul><div className="card-art label-art"><i>Brand A</i><i>Brand B</i><i>Brand C</i></div></article>
+          <article className="solution-card featured"><div className="card-top"><span className="icon-box"><Icon name="car" /></span><small>Mobility</small></div><h3>خودرو و ناوگان متصل</h3><p>مسیر نخست محصول برای دریافت موقعیت، تله‌متری و رویداد، مدیریت دستگاه و ساخت پنل عملیات؛ با لایه‌های تطبیق برای کاهش وابستگی به یک پروتکل مشخص.</p><ul><li>ردیابی و Geofence</li><li>رویداد و هشدار</li><li>ویدئو و رسانه</li><li>یکپارچه‌سازی سازمانی</li></ul><div className="card-art car-art"><i /><span>35.7219° N</span><b>Online</b></div></article>
+          <article className="solution-card"><div className="card-top"><span className="icon-box"><Icon name="pet" /></span><small>Pet Tech</small></div><h3>ردیاب و خدمات حیوانات</h3><p>مسیر محصولی در مرحله طراحی برای ردیاب حیوانات خانگی و شهری؛ شامل موقعیت، محدوده امن، پروفایل حیوان و سرویس‌های مشارکتی مبتنی بر مکان.</p><ul><li>موقعیت و محدوده امن</li><li>پروفایل حیوان</li><li>شبکه مراقبان</li><li>API برای شرکا</li></ul><div className="card-art pet-art"><span>LIAM</span><i>●</i><b>Safe zone</b></div></article>
+          <article className="solution-card"><div className="card-top"><span className="icon-box"><Icon name="layers" /></span><small>B2B2C</small></div><h3>محصول و اپلیکیشن White-label</h3><p>مدل B2B2C برای ارائه‌ی محصول با برند، دامنه و تجربه‌ی هر شریک؛ روی هسته‌ای مشترک با مرزبندی مستاجرها، نقش‌ها و داده‌ها.</p><ul><li>برند و تجربه اختصاصی</li><li>Tenant مستقل</li><li>نقش و دسترسی</li><li>SaaS یا استقرار اختصاصی</li></ul><div className="card-art label-art"><i>Brand A</i><i>Brand B</i><i>Brand C</i></div></article>
         </div>
       </section>
 
       <section className="architecture section" id="architecture">
         <div className="shell">
-          <div className="section-heading light"><div><div className="section-label">معماری پلتفرم <span>03</span></div><h2>پیاده‌سازی عوض می‌شود؛ قرارداد محصول ثابت می‌ماند.</h2></div><p>APIهای عمومی CoreLink قابلیت‌های محصول را توصیف می‌کنند، نه نام و جزئیات ابزارهای داخلی را. بنابراین زیرساخت می‌تواند تکامل پیدا کند، بدون اینکه اپلیکیشن مشتری دوباره نوشته شود.</p></div>
+          <div className="section-heading light"><div><div className="section-label">معماری پلتفرم <span>03</span></div><h2>پیاده‌سازی عوض می‌شود؛ قرارداد محصول ثابت می‌ماند.</h2></div><p>اصل معماری CoreLink این است که API عمومی، قابلیت محصول را توصیف کند نه نام ابزار داخلی را. با تثبیت و نسخه‌بندی قراردادها، اجزای زیرساخت می‌توانند با کمترین اثر بر یکپارچه‌سازی مشتری تکامل پیدا کنند.</p></div>
           <div className="layer-stack">
             <div className="layer consumer"><b>Experiences</b><span>پنل عملیات</span><span>اپ موبایل</span><span>White-label</span><span>اتوماسیون سازمانی</span></div>
             <div className="flow">↑ REST · Webhooks · Events · SDKs ↑</div>
@@ -101,31 +105,28 @@ export default function Home() {
       </section>
 
       <section className="developers section shell" id="developers">
-        <div className="dev-copy"><div className="section-label">ساخته‌شده برای توسعه‌دهنده <span>04</span></div><h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2><p>قراردادهای قابل خواندن توسط ماشین، SDKهای رسمی، Mock Server و ابزار خط فرمان، اتصال به CoreLink را قابل پیش‌بینی و قابل تست می‌کنند. MCP Server هم مسیر استفاده‌ی عامل‌های هوشمند از پلتفرم را باز می‌کند.</p><div className="dev-links"><a href="https://github.com/CoreLinkPlatform/api-contracts" target="_blank" rel="noreferrer">مشاهده API Contracts ↗</a><a href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">همه‌ی مخزن‌ها ↗</a></div></div>
-        <div className="terminal" dir="ltr"><div className="terminal-head"><span><i/><i/><i/></span><b>quickstart.ts</b><small>TypeScript</small></div><pre><code><span className="pink">import</span> {'{'} CoreLink {'}'} <span className="pink">from</span> <span className="green">&quot;@corelink/sdk&quot;</span>;
+        <div className="dev-copy"><div className="section-label">ساخته‌شده برای توسعه‌دهنده <span>04</span></div><h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2><p>سطح توسعه‌دهندگان CoreLink در حال شکل‌گیری است: قراردادهای قابل خواندن توسط ماشین در اولویت‌اند و SDKها، CLI، Mock Server و MCP Server در نقشه راه عمومی قرار دارند. هنوز بسته‌ی رسمی قابل نصب منتشر نشده است.</p><div className="dev-links"><a href="https://github.com/CoreLinkPlatform/api-contracts" target="_blank" rel="noreferrer">مشاهده API Contracts ↗</a><a href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">همه‌ی مخزن‌ها ↗</a></div></div>
+        <div className="terminal" dir="ltr"><div className="terminal-head"><span><i/><i/><i/></span><b>target-contract.http</b><small>API design preview</small></div><pre><code><span className="pink">POST</span> /v1/devices
+Authorization: Bearer <span className="cyan">$ACCESS_TOKEN</span>
+Content-Type: application/json
 
-<span className="pink">const</span> corelink = <span className="pink">new</span> <span className="blue">CoreLink</span>({'{'}
-  baseUrl: process.env.<span className="cyan">CORELINK_API_URL</span>,
-  accessToken: <span className="pink">async</span> () =&gt; token,
-{'}'});
-
-<span className="pink">const</span> devices = <span className="pink">await</span> corelink.devices.<span className="blue">list</span>({'{'}
-  tenantId: <span className="green">&quot;tenant_id&quot;</span>,
-{'}'});
-
-console.<span className="blue">log</span>(devices.items);</code></pre><div className="terminal-result"><span>200 OK</span><b>↳ 24 connected devices</b></div></div>
+{'{'}
+  <span className="blue">&quot;external_id&quot;</span>: <span className="green">&quot;device-1024&quot;</span>,
+  <span className="blue">&quot;type&quot;</span>: <span className="green">&quot;vehicle_tracker&quot;</span>,
+  <span className="blue">&quot;tenant_id&quot;</span>: <span className="green">&quot;tenant_id&quot;</span>
+{'}'}</code></pre><div className="terminal-result"><span>DESIGN PREVIEW</span><b>نمونه‌ی جهت‌گیری قرارداد؛ نه API منتشرشده</b></div></div>
       </section>
 
       <section className="open-source shell">
-        <div className="section-heading"><div><div className="section-label">Developer surface <span>05</span></div><h2>زیرساخت خصوصی؛ سطح توسعه‌ی عمومی و استاندارد.</h2></div><p>هسته‌ی تجاری خصوصی می‌ماند، اما قراردادها، ابزارها و مسیرهای ادغام در مخزنهای عمومی و قابل نسخه‌بندی منتشر می‌شوند.</p></div>
-        <div className="repo-grid">{repos.map((item) => <a key={item.repo} href={`https://github.com/CoreLinkPlatform/${item.repo}`} target="_blank" rel="noreferrer"><div><span className="repo-icon">&lt;/&gt;</span><b>{item.name}</b></div><p>{item.desc}</p><small>CoreLinkPlatform/{item.repo} <i>↗</i></small></a>)}</div>
+        <div className="section-heading"><div><div className="section-label">Developer surface <span>05</span></div><h2>زیرساخت خصوصی؛ سطح توسعه‌ی عمومی و استاندارد.</h2></div><p>هسته‌ی تجاری خصوصی می‌ماند و مخزن‌های عمومی برای انتشار تدریجی قراردادها، مستندات و ابزارهای ادغام آماده شده‌اند. وضعیت هر مورد صریحاً در همان مخزن اعلام می‌شود.</p></div>
+        <div className="repo-grid">{repos.map((item) => <a key={item.repo} href={`https://github.com/CoreLinkPlatform/${item.repo}`} target="_blank" rel="noreferrer"><div><span className="repo-icon">&lt;/&gt;</span><b>{item.name}</b></div><span className="repo-status">{item.status}</span><p>{item.desc}</p><small>CoreLinkPlatform/{item.repo} <i>↗</i></small></a>)}</div>
       </section>
 
       <section className="vision section" id="vision">
-        <div className="shell vision-grid"><div><div className="section-label">فرصت ساخت یک زیرساخت پایه <span>06</span></div><h2>بازار به یک اپلیکیشن دیگر نیاز ندارد؛ به لایه‌ای برای ساخت ده‌ها محصول نیاز دارد.</h2><p>CoreLink از یک مسئله‌ی واقعی آغاز شده: اتصال سخت‌افزارهای ناهمگون به تجربه‌های قابل فروش. مسیر رشد، تکرار همان زیرساخت در بازارهای خودرو، حیوانات و محصولات هوشمند نیست؛ تبدیل آن به یک هسته‌ی مشترک B2B2C است.</p></div><div className="vision-points"><article><b>01</b><h3>مسئله اثبات‌شده</h3><p>پیچیدگی اتصال، چندپروتکلی و White-label در پروژه‌های واقعی.</p></article><article><b>02</b><h3>دارایی قابل تکرار</h3><p>هسته چندمستاجری، قرارداد API و ابزار توسعه؛ قابل استفاده در چند صنعت.</p></article><article><b>03</b><h3>مسیر ورود روشن</h3><p>شروع با راهکارهای خودرو و ردیاب حیوان، سپس توسعه اکوسیستم شرکا.</p></article><article><b>04</b><h3>آماده‌ی شتاب‌گیری</h3><p>تمرکز سرمایه و شتاب‌دهی روی محصول‌سازی، پایلوت و کانال فروش B2B.</p></article></div></div>
+        <div className="shell vision-grid"><div><div className="section-label">فرصت ساخت یک زیرساخت پایه <span>06</span></div><h2>بازار به یک اپلیکیشن دیگر نیاز ندارد؛ به لایه‌ای برای ساخت ده‌ها محصول نیاز دارد.</h2><p>CoreLink از تجربه‌ی عملی اتصال سخت‌افزارها و سامانه‌های ناهمگون شکل گرفته است. فرضیه‌ی محصول این است که بخش بزرگی از این پیچیدگی میان بازارهای مختلف مشترک است و می‌تواند به یک زیرساخت B2B2C قابل تکرار تبدیل شود.</p></div><div className="vision-points"><article><b>01</b><h3>مسئله‌ی شناخته‌شده</h3><p>پیچیدگی اتصال، چندپروتکلی و White-label در پروژه‌های واقعی.</p></article><article><b>02</b><h3>هسته‌ی قابل تکرار</h3><p>معماری چندمستاجری و قراردادهای API با امکان استفاده در چند صنعت.</p></article><article><b>03</b><h3>مسیر ورود متمرکز</h3><p>شروع از خودرو و ناوگان؛ اعتبارسنجی مسیر ردیاب حیوانات در گام بعد.</p></article><article><b>04</b><h3>نیاز روشن به شتاب‌دهی</h3><p>تبدیل زیرساخت فنی به محصول، اجرای پایلوت و ساخت کانال فروش B2B.</p></article></div></div>
       </section>
 
-      <section className="cta-section shell"><div className="cta-core"><span className="brand-mark large"><i/><b/></span></div><div><small>CORELINK PLATFORM</small><h2>محصول هوشمند بعدی را روی یک هسته‌ی آماده بسازیم.</h2><p>برای همکاری فنی، اجرای پایلوت، سرمایه‌گذاری یا ساخت یک راهکار White-label با ما در ارتباط باشید.</p></div><div className="actions"><a className="button primary" href="https://www.linkedin.com/in/jaavid" target="_blank" rel="noreferrer">گفت‌وگو درباره همکاری <span>↗</span></a><a className="button secondary" href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">مشاهده GitHub</a></div></section>
+      <section className="cta-section shell"><div className="cta-core"><BrandSymbol className="cta-symbol" /></div><div><small>CORELINK PLATFORM</small><h2>محصول هوشمند بعدی را روی یک زیرساخت مشترک بسازیم.</h2><p>برای همکاری فنی، اجرای پایلوت، سرمایه‌گذاری یا ساخت یک راهکار White-label با ما در ارتباط باشید.</p></div><div className="actions"><a className="button primary" href="https://www.linkedin.com/in/jaavid" target="_blank" rel="noreferrer">گفت‌وگو درباره همکاری <span>↗</span></a><a className="button secondary" href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">مشاهده GitHub</a></div></section>
 
       <footer className="footer shell"><Logo/><p>زیرساخت اتصال و یکپارچه‌سازی محصولات هوشمند</p><div><a href="https://github.com/CoreLinkPlatform">GitHub</a><a href="#developers">Developers</a><a href="#top">بازگشت به بالا ↑</a></div><small>© 2026 CoreLink Platform</small></footer>
     </main>
