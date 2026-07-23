@@ -1,26 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-  <title id="title">CoreLink symbol</title>
-  <desc id="desc">A central core connected to five network nodes inside a C-shaped arc.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="512" height="512" viewBox="0 0 512 512"
+     role="img" aria-labelledby="title desc">
+  <title id="title">CoreLink icon</title>
+  <desc id="desc">A central core connected to three network nodes, enclosed by a C-shaped infrastructure arc.</desc>
+
   <defs>
-    <linearGradient id="corelink-gradient" x1="28" y1="20" x2="137" y2="139" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00C2FF"/>
-      <stop offset=".55" stop-color="#0A8CFF"/>
-      <stop offset="1" stop-color="#7B5CFF"/>
-    </linearGradient>
-    <linearGradient id="corelink-navy-cyan" x1="30" y1="82" x2="126" y2="43" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1F3A"/>
-      <stop offset="1" stop-color="#00C2FF"/>
+    <linearGradient id="corelink-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="44" x2="0" y2="468">
+      <stop offset="0%" stop-color="#00C2FF"/>
+      <stop offset="54%" stop-color="#168BFF"/>
+      <stop offset="100%" stop-color="#7B5CFF"/>
     </linearGradient>
   </defs>
-  <path d="M105 20A60 60 0 1 0 105 140" fill="none" stroke="url(#corelink-gradient)" stroke-width="12" stroke-linecap="round"/>
-  <path d="M29 80h37M80 80V35M80 80v45M92 68l25-22M95 80h35M92 92l25 22" fill="none" stroke="url(#corelink-navy-cyan)" stroke-width="8" stroke-linecap="round"/>
-  <path d="M95 80h35" fill="none" stroke="#7B5CFF" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="80" cy="80" r="20" fill="none" stroke="#0B1F3A" stroke-width="9"/>
-  <g fill="#fff" stroke-width="8">
-    <circle cx="105" cy="20" r="9" stroke="#00C2FF"/>
-    <circle cx="105" cy="140" r="9" stroke="#4E73FF"/>
-    <circle cx="124" cy="40" r="9" stroke="#00C2FF"/>
-    <circle cx="139" cy="80" r="9" stroke="#7B5CFF"/>
-    <circle cx="124" cy="120" r="9" stroke="#00C2FF"/>
+
+  <g fill="none" stroke="url(#corelink-gradient)" stroke-linejoin="round">
+    <!-- C-shaped infrastructure arc -->
+    <path d="M 272 68
+             C 142 68, 58 148, 58 256
+             C 58 364, 142 444, 272 444"
+          stroke-width="28" stroke-linecap="round"/>
+
+    <!-- Inner terminals of the C arc -->
+    <path d="M 272 90 V 150" stroke-width="20" stroke-linecap="butt"/>
+    <path d="M 272 422 V 362" stroke-width="20" stroke-linecap="butt"/>
+
+    <!-- Short left-side connector bar -->
+    <path d="M 58 256 H 150" stroke-width="26" stroke-linecap="butt"/>
+
+    <!-- Central core -->
+    <circle cx="242" cy="256" r="55" stroke-width="22"/>
+
+    <!-- Network links -->
+    <path d="M 286 224 L 371 168" stroke-width="18" stroke-linecap="butt"/>
+    <path d="M 297 256 H 416" stroke-width="18" stroke-linecap="butt"/>
+    <path d="M 286 288 L 371 344" stroke-width="18" stroke-linecap="butt"/>
+
+    <!-- Arc endpoint nodes -->
+    <circle cx="272" cy="68" r="22" stroke-width="14"/>
+    <circle cx="272" cy="444" r="22" stroke-width="14"/>
+
+    <!-- Linked ecosystem nodes -->
+    <circle cx="387" cy="158" r="21" stroke-width="14"/>
+    <circle cx="436" cy="256" r="21" stroke-width="14"/>
+    <circle cx="387" cy="354" r="21" stroke-width="14"/>
   </g>
 </svg>

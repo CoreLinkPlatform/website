@@ -3,6 +3,7 @@ import {
   ArrowUp,
   BellRing,
   CarFront,
+  Cat,
   CloudCog,
   Code2,
   ExternalLink,
@@ -111,14 +112,14 @@ function PetSafetyMap() {
       </div>
       <div className="pet-marker liam-marker">
         <span>
-          <PawPrint aria-hidden="true" size={17} />
+          <Cat aria-hidden="true" size={17} />
         </span>
         <b>لیام</b>
         <small>داخل محدوده</small>
       </div>
       <div className="pet-marker ninoosh-marker">
         <span>
-          <PawPrint aria-hidden="true" size={17} />
+          <Cat aria-hidden="true" size={17} />
         </span>
         <b>نینوش</b>
         <small>
@@ -311,14 +312,14 @@ export default function Home() {
               </span>
               <small>Mobility</small>
             </div>
-            <h3>خودرو و ناوگان متصل</h3>
+            <h3> ناوگان متصل</h3>
             <p>
               مسیر نخست محصول برای دریافت موقعیت، تله‌متری و رویداد، مدیریت
               دستگاه و ساخت پنل عملیات؛ با لایه‌های تطبیق برای کاهش وابستگی به
               یک پروتکل مشخص.
             </p>
             <ul>
-              <li>ردیابی و Geofence</li>
+              <li>ردیابی و کنترل محدوده‌های جغرافیایی</li>
               <li>رویداد و هشدار</li>
               <li>ویدئو و رسانه</li>
               <li>یکپارچه‌سازی سازمانی</li>
@@ -336,7 +337,7 @@ export default function Home() {
               </span>
               <small>B2B2C</small>
             </div>
-            <h3>محصول و اپلیکیشن White-label</h3>
+            <h3>White Label</h3>
             <p>
               مدل B2B2C برای ارائه‌ی محصول با برند، دامنه و تجربه‌ی هر شریک؛ روی
               هسته‌ای مشترک با مرزبندی مستاجرها، نقش‌ها و داده‌ها.
@@ -360,7 +361,7 @@ export default function Home() {
               </span>
               <small>Pet Tech</small>
             </div>
-            <h3>ردیاب و خدمات حیوانات</h3>
+            <h3>ردیاب حیوانات</h3>
             <p>
               مسیر محصولی در مرحله طراحی برای ردیاب حیوانات خانگی و شهری؛ شامل
               موقعیت، محدوده امن، پروفایل حیوان و سرویس‌های مشارکتی مبتنی بر
