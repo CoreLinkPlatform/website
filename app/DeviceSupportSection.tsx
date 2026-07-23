@@ -84,8 +84,8 @@ export default function DeviceSupportSection() {
             <b>CoreLink</b>
           </div>
           <div className="support-stats" aria-label="آمار پوشش دستگاه و پروتکل">
-            <Counter target={250} suffix="+" label="پروتکل و خانواده پروتکلی" />
-            <Counter target={15000} suffix="+" label="مدل و پیکربندی دستگاه" />
+            <Counter target={1} suffix="" label="کاتالوگ سازگاریِ نسخه‌دار" />
+            <Counter target={3} suffix="" label="مرحلهٔ تأیید هر مدل" />
           </div>
           <div className="signal-ring ring-a" /><div className="signal-ring ring-b" /><div className="signal-ring ring-c" />
         </div>
@@ -113,7 +113,7 @@ export default function DeviceSupportSection() {
 
       <div className="shell support-foot">
         <Wifi aria-hidden="true" />
-        <p>سازگاری هر مدل به نسخه firmware، شیوه انتقال داده و دسترسی به مستندات فنی آن وابسته است. پیش از اتصال عملی، پروفایل دستگاه در آزمایشگاه سازگاری CoreLink اعتبارسنجی می‌شود.</p>
+        <p>سازگاری هر مدل به نسخهٔ firmware، شیوهٔ انتقال داده و پیکربندی درگاه وابسته است. پیش از اتصال عملی، پروفایل دستگاه اعتبارسنجی می‌شود. <a href="/devices">مشاهدهٔ کاتالوگ و وضعیت سازگاری</a></p>
       </div>
     </section>
   );
