@@ -63,15 +63,15 @@ client.telemetry().publish(
 function TypeScriptCode() {
   return <code>
     <span className="syn-keyword">import</span> {"{ "}<span className="syn-type">CoreLink</span>{" }"} <span className="syn-keyword">from</span> <span className="syn-string">&quot;@corelink/sdk&quot;</span>;<br /><br />
-    <span className="syn-keyword">const</span> client <span className="syn-operator">=</span> <span className="syn-keyword">new</span> <span className="syn-type">CoreLink</span>({"{"})<br />
+    <span className="syn-keyword">const</span> client <span className="syn-operator">=</span> <span className="syn-keyword">new</span> <span className="syn-type">CoreLink</span><span className="syn-operator">{"({"}</span><br />
     {"  "}token: process.env.<span className="syn-property">CORELINK_TOKEN</span>!,<br />
     {"}"});<br /><br />
-    <span className="syn-keyword">const</span> device <span className="syn-operator">=</span> <span className="syn-keyword">await</span> client.devices.<span className="syn-function">create</span>({"{"})<br />
+    <span className="syn-keyword">const</span> device <span className="syn-operator">=</span> <span className="syn-keyword">await</span> client.devices.<span className="syn-function">create</span><span className="syn-operator">{"({"}</span><br />
     {"  "}externalId: <span className="syn-string">&quot;vehicle-1024&quot;</span>,<br />
     {"  "}type: <span className="syn-string">&quot;vehicle_tracker&quot;</span>,<br />
     {"  "}protocol: <span className="syn-string">&quot;mqtt&quot;</span>,<br />
     {"}"});<br /><br />
-    <span className="syn-keyword">await</span> client.telemetry.<span className="syn-function">publish</span>(device.id, {"{"})<br />
+    <span className="syn-keyword">await</span> client.telemetry.<span className="syn-function">publish</span><span className="syn-operator">{"(device.id, {"}</span><br />
     {"  "}location: {"{ "}lat: <span className="syn-number">35.7219</span>, lng: <span className="syn-number">51.3347</span>{" }"},<br />
     {"  "}speedKph: <span className="syn-number">42</span>,<br />
     {"}"});
