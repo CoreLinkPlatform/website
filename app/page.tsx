@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowUp, BellRing, CarFront, CloudCog, Code2, ExternalLink, GitBranch, House, Layers3, PawPrint, ShieldCheck, type LucideIcon } from "lucide-react";
+import DeviceSupportSection from "./DeviceSupportSection";
 
 const repos = [
   { name: "API Contracts", repo: "api-contracts", desc: "فضای انتشار OpenAPI، AsyncAPI، Schema و مجموعه‌های Postman", status: "در حال تدوین" },
@@ -55,10 +56,11 @@ export default function Home() {
           <a href="#top"><span>00</span>معرفی</a>
           <a href="#platform"><span>01</span>مسئله</a>
           <a href="#solutions"><span>02</span>راهکارها</a>
-          <a href="#architecture"><span>03</span>معماری</a>
-          <a href="#developers"><span>04</span>توسعه‌دهندگان</a>
-          <a href="#resources"><span>05</span>منابع عمومی</a>
-          <a href="#vision"><span>06</span>مسیر رشد</a>
+          <a href="#device-support"><span>03</span>دستگاه‌ها</a>
+          <a href="#architecture"><span>04</span>معماری</a>
+          <a href="#developers"><span>05</span>توسعه‌دهندگان</a>
+          <a href="#resources"><span>06</span>منابع عمومی</a>
+          <a href="#vision"><span>07</span>مسیر رشد</a>
         </nav>
       </div>
 
@@ -122,9 +124,11 @@ export default function Home() {
         </div>
       </section>
 
+      <DeviceSupportSection />
+
       <section className="architecture section" id="architecture">
         <div className="shell">
-          <div className="section-heading light"><div><div className="section-label">معماری پلتفرم <span>03</span></div><h2>پیاده‌سازی عوض می‌شود؛ قرارداد محصول ثابت می‌ماند.</h2></div><p>اصل معماری CoreLink این است که API عمومی، قابلیت محصول را توصیف کند نه نام ابزار داخلی را. با تثبیت و نسخه‌بندی قراردادها، اجزای زیرساخت می‌توانند با کمترین اثر بر یکپارچه‌سازی مشتری تکامل پیدا کنند.</p></div>
+          <div className="section-heading light"><div><div className="section-label">معماری پلتفرم <span>04</span></div><h2>پیاده‌سازی عوض می‌شود؛ قرارداد محصول ثابت می‌ماند.</h2></div><p>اصل معماری CoreLink این است که API عمومی، قابلیت محصول را توصیف کند نه نام ابزار داخلی را. با تثبیت و نسخه‌بندی قراردادها، اجزای زیرساخت می‌توانند با کمترین اثر بر یکپارچه‌سازی مشتری تکامل پیدا کنند.</p></div>
           <div className="layer-stack">
             <div className="layer consumer"><b>Experiences</b><span>پنل عملیات</span><span>اپ موبایل</span><span>White-label</span><span>اتوماسیون سازمانی</span></div>
             <div className="flow"><ArrowUp aria-hidden="true" size={14} /><span>REST · Webhooks · Events · SDKs</span></div>
@@ -136,7 +140,7 @@ export default function Home() {
       </section>
 
       <section className="developers section shell" id="developers">
-        <div className="dev-copy"><div className="section-label">ساخته‌شده برای توسعه‌دهنده <span>04</span></div><h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2><p>سطح توسعه‌دهندگان CoreLink در حال شکل‌گیری است: قراردادهای قابل خواندن توسط ماشین در اولویت‌اند و SDKها، CLI، Mock Server و MCP Server در نقشه راه عمومی قرار دارند. هنوز بسته‌ی رسمی قابل نصب منتشر نشده است.</p><div className="dev-links"><a href="https://github.com/CoreLinkPlatform/api-contracts" target="_blank" rel="noreferrer">مشاهده API Contracts <ExternalLink aria-hidden="true" size={13} /></a><a href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">همه‌ی مخزن‌ها <ExternalLink aria-hidden="true" size={13} /></a></div></div>
+        <div className="dev-copy"><div className="section-label">ساخته‌شده برای توسعه‌دهنده <span>05</span></div><h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2><p>سطح توسعه‌دهندگان CoreLink در حال شکل‌گیری است: قراردادهای قابل خواندن توسط ماشین در اولویت‌اند و SDKها، CLI، Mock Server و MCP Server در نقشه راه عمومی قرار دارند. هنوز بسته‌ی رسمی قابل نصب منتشر نشده است.</p><div className="dev-links"><a href="https://github.com/CoreLinkPlatform/api-contracts" target="_blank" rel="noreferrer">مشاهده API Contracts <ExternalLink aria-hidden="true" size={13} /></a><a href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">همه‌ی مخزن‌ها <ExternalLink aria-hidden="true" size={13} /></a></div></div>
         <div className="terminal" dir="ltr"><div className="terminal-head"><span><i/><i/><i/></span><b>target-contract.http</b><small>API design preview</small></div><pre><code><span className="pink">POST</span> /v1/devices
 Authorization: Bearer <span className="cyan">$ACCESS_TOKEN</span>
 Content-Type: application/json
@@ -149,12 +153,12 @@ Content-Type: application/json
       </section>
 
       <section className="open-source shell" id="resources">
-        <div className="section-heading"><div><div className="section-label">Developer surface <span>05</span></div><h2>زیرساخت خصوصی؛ سطح توسعه‌ی عمومی و استاندارد.</h2></div><p>هسته‌ی تجاری خصوصی می‌ماند و مخزن‌های عمومی برای انتشار تدریجی قراردادها، مستندات و ابزارهای ادغام آماده شده‌اند. وضعیت هر مورد صریحاً در همان مخزن اعلام می‌شود.</p></div>
+        <div className="section-heading"><div><div className="section-label">Developer surface <span>06</span></div><h2>زیرساخت خصوصی؛ سطح توسعه‌ی عمومی و استاندارد.</h2></div><p>هسته‌ی تجاری خصوصی می‌ماند و مخزن‌های عمومی برای انتشار تدریجی قراردادها، مستندات و ابزارهای ادغام آماده شده‌اند. وضعیت هر مورد صریحاً در همان مخزن اعلام می‌شود.</p></div>
         <div className="repo-grid">{repos.map((item) => <a key={item.repo} href={`https://github.com/CoreLinkPlatform/${item.repo}`} target="_blank" rel="noreferrer"><div><span className="repo-icon"><Code2 aria-hidden="true" size={17} /></span><b>{item.name}</b></div><span className="repo-status">{item.status}</span><p>{item.desc}</p><small>CoreLinkPlatform/{item.repo} <i><ExternalLink aria-hidden="true" size={13} /></i></small></a>)}</div>
       </section>
 
       <section className="vision section" id="vision">
-        <div className="shell vision-grid"><div><div className="section-label">فرصت ساخت یک زیرساخت پایه <span>06</span></div><h2>بازار به یک اپلیکیشن دیگر نیاز ندارد؛ به لایه‌ای برای ساخت ده‌ها محصول نیاز دارد.</h2><p>CoreLink از تجربه‌ی عملی اتصال سخت‌افزارها و سامانه‌های ناهمگون شکل گرفته است. فرضیه‌ی محصول این است که بخش بزرگی از این پیچیدگی میان بازارهای مختلف مشترک است و می‌تواند به یک زیرساخت B2B2C قابل تکرار تبدیل شود.</p></div><div className="vision-points"><article><b>01</b><h3>مسئله‌ی شناخته‌شده</h3><p>پیچیدگی اتصال، چندپروتکلی و White-label در پروژه‌های واقعی.</p></article><article><b>02</b><h3>هسته‌ی قابل تکرار</h3><p>معماری چندمستاجری و قراردادهای API با امکان استفاده در چند صنعت.</p></article><article><b>03</b><h3>مسیر ورود متمرکز</h3><p>شروع از خودرو و ناوگان؛ اعتبارسنجی مسیر ردیاب حیوانات در گام بعد.</p></article><article><b>04</b><h3>نیاز روشن به شتاب‌دهی</h3><p>تبدیل زیرساخت فنی به محصول، اجرای پایلوت و ساخت کانال فروش B2B.</p></article></div></div>
+        <div className="shell vision-grid"><div><div className="section-label">فرصت ساخت یک زیرساخت پایه <span>07</span></div><h2>بازار به یک اپلیکیشن دیگر نیاز ندارد؛ به لایه‌ای برای ساخت ده‌ها محصول نیاز دارد.</h2><p>CoreLink از تجربه‌ی عملی اتصال سخت‌افزارها و سامانه‌های ناهمگون شکل گرفته است. فرضیه‌ی محصول این است که بخش بزرگی از این پیچیدگی میان بازارهای مختلف مشترک است و می‌تواند به یک زیرساخت B2B2C قابل تکرار تبدیل شود.</p></div><div className="vision-points"><article><b>01</b><h3>مسئله‌ی شناخته‌شده</h3><p>پیچیدگی اتصال، چندپروتکلی و White-label در پروژه‌های واقعی.</p></article><article><b>02</b><h3>هسته‌ی قابل تکرار</h3><p>معماری چندمستاجری و قراردادهای API با امکان استفاده در چند صنعت.</p></article><article><b>03</b><h3>مسیر ورود متمرکز</h3><p>شروع از خودرو و ناوگان؛ اعتبارسنجی مسیر ردیاب حیوانات در گام بعد.</p></article><article><b>04</b><h3>نیاز روشن به شتاب‌دهی</h3><p>تبدیل زیرساخت فنی به محصول، اجرای پایلوت و ساخت کانال فروش B2B.</p></article></div></div>
       </section>
 
       <section className="cta-section shell" id="contact"><div className="cta-core"><BrandSymbol className="cta-symbol" /></div><div><small>CORELINK PLATFORM</small><h2>محصول هوشمند بعدی را روی یک زیرساخت مشترک بسازیم.</h2><p>برای همکاری فنی، اجرای پایلوت، سرمایه‌گذاری یا ساخت یک راهکار White-label با ما در ارتباط باشید.</p></div><div className="actions"><a className="button primary" href="https://www.linkedin.com/in/jaavid" target="_blank" rel="noreferrer">گفت‌وگو درباره همکاری <ExternalLink aria-hidden="true" size={16} /></a><a className="button secondary" href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">مشاهده GitHub</a></div></section>
