@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowUp, BellRing, CarFront, CloudCog, Code2, ExternalLink, GitBranch, House, Layers3, PawPrint, ShieldCheck, type LucideIcon } from "lucide-react";
+import ConnectedOrbit from "./ConnectedOrbit";
 import DeviceSupportSection from "./DeviceSupportSection";
 
 const repos = [
@@ -78,21 +79,8 @@ export default function Home() {
 
         <div className="core-visual" aria-label="نمودار اتصال محصولات به هسته CoreLink">
           <div className="world-grid" />
-          <div className="orbit o1" /><div className="orbit o2" /><div className="orbit o3" />
-          <svg className="connection-map" viewBox="0 0 700 580" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M350 290 C270 225 180 150 88 118" />
-            <path d="M350 290 C435 218 520 150 612 115" />
-            <path d="M350 290 C245 300 160 330 72 350" />
-            <path d="M350 290 C455 330 525 385 610 420" />
-            <path d="M350 290 C275 372 202 455 135 505" />
-            <circle cx="220" cy="190" r="4" /><circle cx="500" cy="176" r="4" /><circle cx="205" cy="320" r="4" /><circle cx="502" cy="362" r="4" /><circle cx="236" cy="420" r="4" />
-          </svg>
           <div className="core"><BrandSymbol className="core-symbol" /><small>CORELINK</small></div>
-          <div className="node vehicle"><span><Icon name="car" /></span><b>Vehicle</b><small>Telemetry</small></div>
-          <div className="node pet"><span><Icon name="pet" /></span><b>Pet Tracker</b><small>Location</small></div>
-          <div className="node apps"><span><Icon name="layers" /></span><b>White-label</b><small>Applications</small></div>
-          <div className="node sdk"><span><Icon name="code" /></span><b>SDK & API</b><small>Developers</small></div>
-          <div className="node cloud"><span><Icon name="cloud" /></span><b>Cloud</b><small>Services</small></div>
+          <ConnectedOrbit />
         </div>
       </section>
 
