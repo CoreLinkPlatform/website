@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUp, BellRing, CarFront, CloudCog, Code2, ExternalLink, GitBranch, House, Layers3, PawPrint, ShieldCheck, type LucideIcon } from "lucide-react";
 import ConnectedOrbit from "./ConnectedOrbit";
+import DeveloperCodeSamples from "./DeveloperCodeSamples";
 import DeviceSupportSection from "./DeviceSupportSection";
 
 const repos = [
@@ -129,15 +130,7 @@ export default function Home() {
 
       <section className="developers section shell" id="developers">
         <div className="dev-copy"><div className="section-label">ساخته‌شده برای توسعه‌دهنده <span>05</span></div><h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2><p>سطح توسعه‌دهندگان CoreLink در حال شکل‌گیری است: قراردادهای قابل خواندن توسط ماشین در اولویت‌اند و SDKها، CLI، Mock Server و MCP Server در نقشه راه عمومی قرار دارند. هنوز بسته‌ی رسمی قابل نصب منتشر نشده است.</p><div className="dev-links"><a href="https://github.com/CoreLinkPlatform/api-contracts" target="_blank" rel="noreferrer">مشاهده API Contracts <ExternalLink aria-hidden="true" size={13} /></a><a href="https://github.com/CoreLinkPlatform" target="_blank" rel="noreferrer">همه‌ی مخزن‌ها <ExternalLink aria-hidden="true" size={13} /></a></div></div>
-        <div className="terminal" dir="ltr"><div className="terminal-head"><span><i/><i/><i/></span><b>target-contract.http</b><small>API design preview</small></div><pre><code><span className="pink">POST</span> /v1/devices
-Authorization: Bearer <span className="cyan">$ACCESS_TOKEN</span>
-Content-Type: application/json
-
-{'{'}
-  <span className="blue">&quot;external_id&quot;</span>: <span className="green">&quot;device-1024&quot;</span>,
-  <span className="blue">&quot;type&quot;</span>: <span className="green">&quot;vehicle_tracker&quot;</span>,
-  <span className="blue">&quot;tenant_id&quot;</span>: <span className="green">&quot;tenant_id&quot;</span>
-{'}'}</code></pre><div className="terminal-result"><span>DESIGN PREVIEW</span><b>نمونه‌ی جهت‌گیری قرارداد؛ نه API منتشرشده</b></div></div>
+        <DeveloperCodeSamples />
       </section>
 
       <section className="open-source shell" id="resources">
