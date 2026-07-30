@@ -91,7 +91,12 @@ export default function DeviceSupportSection() {
         </div>
       </div>
 
-      <div className="compatibility-streams" aria-label="نمونه دستگاه‌ها و پروتکل‌های پشتیبانی‌شده">
+      <p className="sr-only">
+        نمونه دسته‌های دستگاه شامل ردیاب خودرو، ردیاب حیوانات، دوربین، دانگل
+        OBD، سنسور BLE و گیت‌وی صنعتی است. پروتکل‌ها و رابط‌ها شامل MQTT،
+        HTTP، TCP، UDP، LoRaWAN، CAN bus، OBD-II، ONVIF و RTSP هستند.
+      </p>
+      <div className="compatibility-streams" aria-hidden="true">
         <div className="device-stream stream-forward">
           <div className="stream-track">
             {repeatedDevices.map(({ label, icon: Glyph }, index) => (
