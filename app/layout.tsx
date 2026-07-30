@@ -5,10 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://corelinkplatform.ir"),
   title: {
-    default: "CoreLink Platform | زیرساخت محصولات هوشمند",
+    default: "CoreLink Platform | زیرساخت محصولات متصل",
     template: "%s | CoreLink Platform",
   },
-  description: "CoreLink پلتفرمی در حال توسعه برای اتصال و یکپارچه‌سازی محصولات هوشمند، با تمرکز بر معماری چندمستاجری، راهکارهای White-label و APIهای سازمانی است.",
+  description: "CoreLink دستگاه‌ها و پروتکل‌های مختلف را به یک مدل داده و API پایدار متصل می‌کند تا ساخت محصولات ناوگان، IoT و White-label سریع‌تر و قابل‌گسترش‌تر شود.",
   other: {
     "codex-preview": "development",
     "theme-color": "#0B1F3A",
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "CoreLink Platform",
-    description: "پلتفرم در حال توسعه برای اتصال دستگاه‌ها، داده‌ها و محصولات White-label",
+    title: "CoreLink Platform | زیرساخت محصولات متصل",
+    description: "یک هسته مشترک برای اتصال دستگاه، یکپارچه‌سازی داده و ساخت محصولات ناوگان، IoT و White-label.",
     url: "https://corelinkplatform.ir",
     siteName: "CoreLink Platform",
     locale: "fa_IR",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CoreLink Platform",
-    description: "A connected-product platform in development for devices, data, white-label applications, and enterprise integrations.",
+    title: "CoreLink Platform | Connected Product Infrastructure",
+    description: "A shared device, data, and API layer for fleet, IoT, and white-label products.",
   },
 };
 
