@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import { Check, Copy } from "lucide-react";
 
 type Language = "typescript" | "python" | "java";
@@ -126,18 +126,45 @@ export default function DeveloperCodeSamples() {
   const sample = samples[language];
 
   const copyCode = async () => {
-    await navigator.clipboard.writeText(source[language]);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1600);
+    try {
+      await navigator.clipboard.writeText(source[language]);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1600);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const selectWithKeyboard = (event: KeyboardEvent, key: Language) => {
+    const keys = Object.keys(samples) as Language[];
+    const index = keys.indexOf(key);
+    if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+      event.preventDefault();
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      const next = keys[(index + direction + keys.length) % keys.length];
+      setLanguage(next);
+      document.getElementById(`code-tab-${next}`)?.focus();
+    }
   };
 
   return (
     <div className="code-playground" dir="ltr">
+      <div className="preview-badge">پیش‌نمایش طراحی SDK</div>
       <div className="code-tabs" role="tablist" aria-label="انتخاب زبان نمونه کد">
         <span className="window-controls" aria-hidden="true"><i /><i /><i /></span>
         <div>
           {(Object.keys(samples) as Language[]).map((key) => (
-            <button key={key} type="button" role="tab" aria-selected={language === key} onClick={() => setLanguage(key)}>
+            <button
+              key={key}
+              id={`code-tab-${key}`}
+              type="button"
+              role="tab"
+              aria-selected={language === key}
+              aria-controls="code-sample-panel"
+              tabIndex={language === key ? 0 : -1}
+              onKeyDown={(event) => selectWithKeyboard(event, key)}
+              onClick={() => setLanguage(key)}
+            >
               <span className={`language-dot ${key}`} />{samples[key].label}
             </button>
           ))}
@@ -150,11 +177,19 @@ export default function DeveloperCodeSamples() {
           {copied ? "Copied" : "Copy"}
         </button>
       </div>
-      <pre className="code-sample" key={language}>{sample.code}</pre>
+      <pre
+        className="code-sample"
+        id="code-sample-panel"
+        role="tabpanel"
+        aria-labelledby={`code-tab-${language}`}
+        key={language}
+      >
+        {sample.code}
+      </pre>
       <div className="code-result">
         <span><i /> 201 CREATED</span>
         <code>{"{ "}&quot;id&quot;: &quot;dev_01J9X2&quot;, &quot;status&quot;: &quot;online&quot;{" }"}</code>
-        <small>SDK DESIGN PREVIEW</small>
+        <small aria-live="polite">{copied ? "کد کپی شد" : "SDK DESIGN PREVIEW"}</small>
       </div>
     </div>
   );
