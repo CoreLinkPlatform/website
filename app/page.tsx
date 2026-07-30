@@ -7,7 +7,6 @@ import {
   CloudCog,
   Code2,
   ExternalLink,
-  GitBranch,
   House,
   Layers3,
   PawPrint,
@@ -100,7 +99,11 @@ function Logo() {
 
 function PetSafetyMap() {
   return (
-    <div className="pet-map" aria-label="نقشه محدوده امن حیوانات">
+    <div
+      className="pet-map"
+      role="img"
+      aria-label="لیام داخل محدوده امن خانه است و نینوش بیرون از محدوده قرار دارد"
+    >
       <div className="map-road road-one" />
       <div className="map-road road-two" />
       <div className="map-road road-three" />
@@ -137,12 +140,9 @@ export default function Home() {
         <Logo />
         <a
           className="header-cta"
-          href="https://github.com/CoreLinkPlatform"
-          target="_blank"
-          rel="noreferrer"
+          href="#contact"
         >
-          <GitBranch aria-hidden="true" size={17} strokeWidth={1.8} /> GitHub{" "}
-          <ExternalLink aria-hidden="true" size={13} />
+          بررسی یک پایلوت <ArrowLeft aria-hidden="true" size={16} />
         </a>
       </header>
       <div className="section-nav-wrap">
@@ -151,28 +151,22 @@ export default function Home() {
           aria-label="دسترسی سریع به بخش‌های صفحه"
         >
           <a href="#top">
-            <span>00</span>معرفی
-          </a>
-          <a href="#platform">
-            <span>01</span>مسئله
+            معرفی
           </a>
           <a href="#solutions">
-            <span>02</span>راهکارها
+            کاربردها
           </a>
           <a href="#device-support">
-            <span>03</span>دستگاه‌ها
+            سازگاری دستگاه
           </a>
           <a href="#architecture">
-            <span>04</span>معماری
+            معماری
           </a>
           <a href="#developers">
-            <span>05</span>توسعه‌دهندگان
+            توسعه‌دهندگان
           </a>
-          <a href="#resources">
-            <span>06</span>منابع عمومی
-          </a>
-          <a href="#vision">
-            <span>07</span>مسیر رشد
+          <a href="#contact">
+            شروع همکاری
           </a>
         </nav>
       </div>
@@ -180,27 +174,28 @@ export default function Home() {
       <section className="hero shell">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span /> Connected Product Infrastructure
+            <span /> زیرساخت محصولات متصل
           </div>
           <h1>
-            هسته‌ی اتصال و یکپارچه‌سازی <em>محصولات هوشمند</em>
+            زیرساخت مشترک برای ساخت و مقیاس‌دادن <em>محصولات هوشمند</em>
           </h1>
           <p>
-            CoreLink یک پلتفرم در حال توسعه برای اتصال دستگاه‌ها، یکپارچه‌سازی
-            داده و ساخت محصولات White-label است؛ با تمرکز نخست بر خودرو و ناوگان
-            و مسیر توسعه برای ردیاب حیوانات و دیگر محصولات IoT.
+            دستگاه‌ها و پروتکل‌های مختلف را به یک مدل داده و API پایدار متصل
+            کنید؛ سپس پنل، اپ یا راهکار White-label خود را بدون بازسازی هسته
+            عرضه کنید.
           </p>
           <div className="actions">
-            <a className="button primary" href="#developers">
-              شروع برای توسعه‌دهندگان <ArrowLeft aria-hidden="true" size={18} />
+            <a className="button primary" href="#contact">
+              بررسی پایلوت شما <ArrowLeft aria-hidden="true" size={18} />
             </a>
-            <a className="button secondary" href="#platform">
-              معرفی پلتفرم
+            <a className="button secondary" href="#architecture">
+              مشاهده معماری
             </a>
           </div>
-          <div className="hero-note">
-            <span className="pulse" /> API-first · Multi-tenant ·
-            Deployment-flexible
+          <div className="hero-proof" aria-label="خلاصه قابلیت‌های CoreLink">
+            <span><b>۲۵۰+</b> خانواده پروتکلی</span>
+            <span><b>۱۵٬۰۰۰+</b> مدل قابل ارزیابی</span>
+            <span><b>API-first</b> و چندمستاجری</span>
           </div>
         </div>
 
@@ -217,49 +212,24 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="trust shell">
-        <div>
-          <Icon name="code" />
-          <span>
-            <b>API-first</b>
-            <small>طراحی قراردادمحور</small>
-          </span>
-        </div>
-        <div>
-          <Icon name="layers" />
-          <span>
-            <b>Multi-tenant</b>
-            <small>معماری چندمستاجری</small>
-          </span>
-        </div>
-        <div>
-          <Icon name="shield" />
-          <span>
-            <b>White-label</b>
-            <small>برند و تجربه مستقل</small>
-          </span>
-        </div>
-        <div>
-          <Icon name="cloud" />
-          <span>
-            <b>Flexible deployment</b>
-            <small>مسیر SaaS و استقرار اختصاصی</small>
-          </span>
-        </div>
-      </div>
-
       <section className="problem shell section" id="platform">
         <div className="section-label">
           مسئله‌ای که حل می‌کنیم <span>01</span>
         </div>
         <div className="problem-grid">
           <div>
-            <h2>هر محصول هوشمند نباید از صفر یک پلتفرم بسازد.</h2>
+            <h2>برای هر دستگاه، یک پلتفرم تازه نسازید.</h2>
             <p>
-              پروتکل دستگاه، احراز هویت، نقشه، اعلان، استریم، اپلیکیشن و پنل
-              عملیات معمولاً به جزیره‌های جدا تبدیل می‌شوند. نتیجه: زمان عرضه‌ی
-              طولانی، هزینه‌ی نگهداری بالا و قفل‌شدن کسب‌وکار به یک تأمین‌کننده.
+              اتصال دستگاه، احراز هویت، نقشه، هشدار، رسانه و پنل عملیات معمولاً
+              در چند سامانه جدا ساخته می‌شوند. CoreLink این پیچیدگی مشترک را به
+              یک هسته محصول تبدیل می‌کند تا تیم شما روی تجربه بازار خودش متمرکز
+              بماند.
             </p>
+            <ul className="outcome-list">
+              <li><b>عرضه سریع‌تر</b><span>با قراردادها و قابلیت‌های قابل استفاده مجدد</span></li>
+              <li><b>وابستگی کمتر</b><span>با مدل داده پایدار روی چند پروتکل و سخت‌افزار</span></li>
+              <li><b>عملیات یکپارچه</b><span>برای دستگاه، رویداد، فرمان و رسانه</span></li>
+            </ul>
           </div>
           <div className="before-after">
             <article>
@@ -294,14 +264,13 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <div className="section-label">
-              محصولات متصل، یک هسته <span>02</span>
+              محصولاتی که روی CoreLink ساخته می‌شوند <span>02</span>
             </div>
-            <h2>یک پلتفرم؛ چند مسیر بازار</h2>
+            <h2>یک هسته؛ چند محصول مستقل</h2>
           </div>
           <p>
-            هدف CoreLink جداکردن قابلیت‌های مشترک زیرساخت از تجربه‌ی هر بازار
-            است؛ تا هر محصول بتواند برند، قواعد و مدل کسب‌وکار خودش را داشته
-            باشد.
+            قابلیت‌های مشترک در هسته می‌مانند و هر بازار برند، قواعد، نقش‌ها و
+            تجربه خودش را دریافت می‌کند. مسیر نخست، خودرو و ناوگان است.
           </p>
         </div>
         <div className="solution-grid">
@@ -312,11 +281,10 @@ export default function Home() {
               </span>
               <small>Mobility</small>
             </div>
-            <h3> ناوگان متصل</h3>
+            <h3>ناوگان و خودروی متصل</h3>
             <p>
-              مسیر نخست محصول برای دریافت موقعیت، تله‌متری و رویداد، مدیریت
-              دستگاه و ساخت پنل عملیات؛ با لایه‌های تطبیق برای کاهش وابستگی به
-              یک پروتکل مشخص.
+              مسیر اصلی محصول برای دریافت موقعیت، تله‌متری و رویداد، مدیریت
+              دستگاه و ساخت پنل عملیات روی چند مدل سخت‌افزار.
             </p>
             <ul>
               <li>ردیابی و کنترل محدوده‌های جغرافیایی</li>
@@ -337,10 +305,10 @@ export default function Home() {
               </span>
               <small>B2B2C</small>
             </div>
-            <h3>White Label</h3>
+            <h3>محصول White-label</h3>
             <p>
-              مدل B2B2C برای ارائه‌ی محصول با برند، دامنه و تجربه‌ی هر شریک؛ روی
-              هسته‌ای مشترک با مرزبندی مستاجرها، نقش‌ها و داده‌ها.
+              ارائه محصول با برند، دامنه و تجربه هر شریک روی هسته‌ای مشترک؛ با
+              مرزبندی روشن مستاجرها، نقش‌ها و داده‌ها.
             </p>
             <ul>
               <li>برند و تجربه اختصاصی</li>
@@ -363,9 +331,8 @@ export default function Home() {
             </div>
             <h3>ردیاب حیوانات</h3>
             <p>
-              مسیر محصولی در مرحله طراحی برای ردیاب حیوانات خانگی و شهری؛ شامل
-              موقعیت، محدوده امن، پروفایل حیوان و سرویس‌های مشارکتی مبتنی بر
-              مکان.
+              مسیر در حال اعتبارسنجی برای ردیاب حیوانات خانگی و شهری؛ شامل
+              موقعیت، محدوده امن، پروفایل حیوان و شبکه مراقبان.
             </p>
             <ul>
               <li>موقعیت و محدوده امن</li>
@@ -389,13 +356,12 @@ export default function Home() {
               <div className="section-label">
                 معماری پلتفرم <span>04</span>
               </div>
-              <h2>پیاده‌سازی عوض می‌شود؛ قرارداد محصول ثابت می‌ماند.</h2>
+          <h2>اجزای فنی تغییر می‌کنند؛ قرارداد محصول پایدار می‌ماند.</h2>
             </div>
             <p>
-              اصل معماری CoreLink این است که API عمومی، قابلیت محصول را توصیف
-              کند نه نام ابزار داخلی را. با تثبیت و نسخه‌بندی قراردادها، اجزای
-              زیرساخت می‌توانند با کمترین اثر بر یکپارچه‌سازی مشتری تکامل پیدا
-              کنند.
+              API عمومی قابلیت محصول را توصیف می‌کند، نه ابزار داخلی را. به این
+              ترتیب زیرساخت می‌تواند تکامل پیدا کند، بدون اینکه هر تغییر به
+              یکپارچه‌سازی مشتری منتقل شود.
             </p>
           </div>
           <div className="layer-stack">
@@ -438,14 +404,13 @@ export default function Home() {
       <section className="developers section shell" id="developers">
         <div className="dev-copy">
           <div className="section-label">
-            ساخته‌شده برای توسعه‌دهنده <span>05</span>
+            مسیر توسعه‌دهنده <span>05</span>
           </div>
-          <h2>از اولین درخواست تا محصول واقعی، مسیر باید روشن باشد.</h2>
+          <h2>یک قرارداد روشن، از اتصال آزمایشی تا محصول واقعی.</h2>
           <p>
-            سطح توسعه‌دهندگان CoreLink در حال شکل‌گیری است: قراردادهای قابل
-            خواندن توسط ماشین در اولویت‌اند و SDKها، CLI، Mock Server و MCP
-            Server در نقشه راه عمومی قرار دارند. هنوز بسته‌ی رسمی قابل نصب منتشر
-            نشده است.
+            قراردادهای قابل خواندن توسط ماشین نقطه شروع‌اند. SDKها، CLI، Mock
+            Server و MCP Server به‌تدریج روی همین قراردادها منتشر می‌شوند.
+            نمونه روبه‌رو پیش‌نمایش طراحی SDK است و هنوز بسته رسمی قابل نصب نیست.
           </p>
           <div className="dev-links">
             <a
@@ -467,18 +432,18 @@ export default function Home() {
         <DeveloperCodeSamples />
       </section>
 
-      <section className="open-source shell" id="resources">
+      <section className="open-source shell section" id="resources">
         <div className="section-heading">
           <div>
             <div className="section-label">
-              Developer surface <span>06</span>
+              منابع فنی عمومی <span>06</span>
             </div>
-            <h2>زیرساخت خصوصی؛ سطح توسعه‌ی عمومی و استاندارد.</h2>
+            <h2>هسته خصوصی؛ قراردادها و ابزارهای ادغام عمومی.</h2>
           </div>
           <p>
-            هسته‌ی تجاری خصوصی می‌ماند و مخزن‌های عمومی برای انتشار تدریجی
-            قراردادها، مستندات و ابزارهای ادغام آماده شده‌اند. وضعیت هر مورد
-            صریحاً در همان مخزن اعلام می‌شود.
+            مخزن‌های عمومی محل انتشار تدریجی قراردادها، مستندات و ابزارهای
+            ادغام‌اند. وضعیت واقعی هر مورد، از «در حال تدوین» تا «قابل استفاده»،
+            در همان مخزن اعلام می‌شود.
           </p>
         </div>
         <div className="repo-grid">
@@ -512,48 +477,37 @@ export default function Home() {
         <div className="shell vision-grid">
           <div>
             <div className="section-label">
-              فرصت ساخت یک زیرساخت پایه <span>07</span>
+              مسیر شروع همکاری <span>07</span>
             </div>
-            <h2>
-              بازار به یک اپلیکیشن دیگر نیاز ندارد؛ به لایه‌ای برای ساخت ده‌ها
-              محصول نیاز دارد.
-            </h2>
+            <h2>پایلوت را کوچک شروع می‌کنیم؛ مسیر توسعه از ابتدا روشن می‌ماند.</h2>
             <p>
-              CoreLink از تجربه‌ی عملی اتصال سخت‌افزارها و سامانه‌های ناهمگون
-              شکل گرفته است. فرضیه‌ی محصول این است که بخش بزرگی از این پیچیدگی
-              میان بازارهای مختلف مشترک است و می‌تواند به یک زیرساخت B2B2C قابل
-              تکرار تبدیل شود.
+              برای شروع، به پروژه بزرگ و پرریسک نیاز نیست. یک سناریوی مشخص، یک
+              یا چند مدل دستگاه و معیار موفقیت روشن انتخاب می‌کنیم و بعد از
+              اعتبارسنجی فنی، دامنه را گسترش می‌دهیم.
             </p>
           </div>
-          <div className="vision-points">
-            <article>
+          <ol className="vision-points">
+            <li>
               <b>01</b>
-              <h3>مسئله‌ی شناخته‌شده</h3>
-              <p>پیچیدگی اتصال، چندپروتکلی و White-label در پروژه‌های واقعی.</p>
-            </article>
-            <article>
+              <h3>تعریف سناریو</h3>
+              <p>دستگاه، داده موردنیاز، کاربر و معیار موفقیت پایلوت.</p>
+            </li>
+            <li>
               <b>02</b>
-              <h3>هسته‌ی قابل تکرار</h3>
-              <p>
-                معماری چندمستاجری و قراردادهای API با امکان استفاده در چند صنعت.
-              </p>
-            </article>
-            <article>
+              <h3>اتصال نمونه</h3>
+              <p>بررسی پروتکل، ساخت پروفایل دستگاه و دریافت داده واقعی.</p>
+            </li>
+            <li>
               <b>03</b>
-              <h3>مسیر ورود متمرکز</h3>
-              <p>
-                شروع از خودرو و ناوگان؛ اعتبارسنجی مسیر ردیاب حیوانات در گام
-                بعد.
-              </p>
-            </article>
-            <article>
+              <h3>اعتبارسنجی عملیات</h3>
+              <p>آزمون موقعیت، رویداد، هشدار و دسترسی کاربران در میدان.</p>
+            </li>
+            <li>
               <b>04</b>
-              <h3>نیاز روشن به شتاب‌دهی</h3>
-              <p>
-                تبدیل زیرساخت فنی به محصول، اجرای پایلوت و ساخت کانال فروش B2B.
-              </p>
-            </article>
-          </div>
+              <h3>گسترش محصول</h3>
+              <p>افزودن دستگاه‌ها، مستاجرها، برند و یکپارچه‌سازی‌های بعدی.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -563,10 +517,11 @@ export default function Home() {
         </div>
         <div>
           <small>CORELINK PLATFORM</small>
-          <h2>محصول هوشمند بعدی را روی یک زیرساخت مشترک بسازیم.</h2>
+          <h2>سناریوی پایلوت شما را از نظر فنی بررسی کنیم.</h2>
           <p>
-            برای همکاری فنی، اجرای پایلوت، سرمایه‌گذاری یا ساخت یک راهکار
-            White-label با ما در ارتباط باشید.
+            مدل دستگاه، نوع داده و هدف کسب‌وکار را بفرستید. در گفت‌وگوی نخست،
+            مسیر اتصال، ریسک‌های فنی و دامنه یک پایلوت قابل‌اندازه‌گیری را مشخص
+            می‌کنیم.
           </p>
         </div>
         <div className="actions">
@@ -576,7 +531,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            گفت‌وگو درباره همکاری <ExternalLink aria-hidden="true" size={16} />
+            شروع گفت‌وگوی پایلوت <ExternalLink aria-hidden="true" size={16} />
           </a>
           <a
             className="button secondary"
@@ -584,7 +539,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            مشاهده GitHub
+            بررسی منابع فنی
           </a>
         </div>
       </section>
@@ -594,7 +549,7 @@ export default function Home() {
         <p>زیرساخت اتصال و یکپارچه‌سازی محصولات هوشمند</p>
         <div>
           <a href="https://github.com/CoreLinkPlatform">GitHub</a>
-          <a href="#developers">Developers</a>
+          <a href="#developers">توسعه‌دهندگان</a>
           <a href="#top">
             بازگشت به بالا <ArrowUp aria-hidden="true" size={13} />
           </a>
