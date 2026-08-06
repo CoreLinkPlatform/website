@@ -12,7 +12,9 @@ Official website for [CoreLink Platform](https://corelinkplatform.ir).
 - Deployment: `.github/workflows/deploy-pages.yml` on `main`.
 - Production has no application server or database dependency.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback, and
+[QUALITY_GATES.md](QUALITY_GATES.md) for accessibility, performance, SEO and
+analytics-privacy acceptance.
 
 ## Local development
 
@@ -20,6 +22,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback.
 npm ci
 npm run dev
 npm run build
+npm test
 ```
 
 ## Internal preview tooling
