@@ -21,38 +21,44 @@ const repos = [
   {
     name: "API Contracts",
     repo: "api-contracts",
-    desc: "فضای انتشار OpenAPI، AsyncAPI، Schema و مجموعه‌های Postman",
-    status: "در حال تدوین",
+    desc: "قرارداد عمومی Device و Command و envelope رویداد",
+    status: "Alpha · 1.0.0-draft",
+  },
+  {
+    name: "TypeScript SDK",
+    repo: "sdk-typescript",
+    desc: "کلاینت تولیدشده از قرارداد عمومی v1؛ هنوز انتشار پایدار نیست",
+    status: "Prerelease Alpha",
   },
   {
     name: "Python SDK",
     repo: "sdk-python",
-    desc: "SDK برنامه‌ریزی‌شده برای سرویس‌ها و اتوماسیون Python",
-    status: "برنامه‌ریزی‌شده",
+    desc: "کلاینت تولیدشده از قرارداد عمومی v1؛ هنوز انتشار پایدار نیست",
+    status: "Prerelease Alpha",
   },
   {
     name: "Java SDK",
     repo: "sdk-java",
     desc: "SDK برنامه‌ریزی‌شده برای Java و سامانه‌های سازمانی",
-    status: "برنامه‌ریزی‌شده",
+    status: "Scaffold · Planned",
   },
   {
     name: "CoreLink CLI",
     repo: "cli",
     desc: "ابزار خط فرمان برنامه‌ریزی‌شده برای توسعه و عملیات",
-    status: "برنامه‌ریزی‌شده",
+    status: "Scaffold · Planned",
   },
   {
     name: "MCP Server",
     repo: "mcp-server",
     desc: "مسیر پیشنهادی اتصال عامل‌های هوشمند به قابلیت‌های CoreLink",
-    status: "برنامه‌ریزی‌شده",
+    status: "Scaffold · Planned",
   },
   {
     name: "Mock Server",
     repo: "mock-server",
     desc: "شبیه‌ساز برنامه‌ریزی‌شده برای توسعه و تست مستقل",
-    status: "برنامه‌ریزی‌شده",
+    status: "Scaffold · Planned",
   },
 ];
 
@@ -180,7 +186,7 @@ export default function Home() {
             زیرساخت مشترک برای ساخت و مقیاس‌دادن <em>محصولات هوشمند</em>
           </h1>
           <p>
-            دستگاه‌ها و پروتکل‌های مختلف را به یک مدل داده و API پایدار متصل
+            دستگاه‌ها و پروتکل‌های مختلف را به یک مدل داده و API نسخه‌دار متصل
             کنید؛ سپس پنل، اپ یا راهکار White-label خود را بدون بازسازی هسته
             عرضه کنید.
           </p>
@@ -193,9 +199,9 @@ export default function Home() {
             </a>
           </div>
           <div className="hero-proof" aria-label="خلاصه قابلیت‌های CoreLink">
-            <span><b>۲۵۰+</b> خانواده پروتکلی</span>
-            <span><b>۱۵٬۰۰۰+</b> مدل قابل ارزیابی</span>
-            <span><b>API-first</b> و چندمستاجری</span>
+            <span><b>1.0.0-draft</b> قرارداد عمومی</span>
+            <span><b>TS / Python</b> کلاینت prerelease</span>
+            <span><b>Device + Command</b> محدوده فعلی API</span>
           </div>
         </div>
 
@@ -303,7 +309,7 @@ export default function Home() {
               <span className="icon-box">
                 <Icon name="layers" />
               </span>
-              <small>B2B2C</small>
+              <small>B2B2C · Planned</small>
             </div>
             <h3>محصول White-label</h3>
             <p>
@@ -314,7 +320,7 @@ export default function Home() {
               <li>برند و تجربه اختصاصی</li>
               <li>Tenant مستقل</li>
               <li>نقش و دسترسی</li>
-              <li>SaaS یا استقرار اختصاصی</li>
+              <li>الگوی استقرار در حال طراحی</li>
             </ul>
             <div className="card-art label-art">
               <i>Brand A</i>
@@ -378,12 +384,12 @@ export default function Home() {
             </div>
             <div className="layer core-layer">
               <b>CoreLink Capability Layer</b>
-              <span>Identity</span>
-              <span>Device Registry</span>
-              <span>Digital Twin</span>
-              <span>Telemetry</span>
-              <span>Commands</span>
-              <span>Media</span>
+              <span>Identity · Alpha</span>
+              <span>Device Registry · Alpha</span>
+              <span>Digital Twin · Experimental</span>
+              <span>Telemetry · Experimental</span>
+              <span>Commands · Alpha</span>
+              <span>Media · Planned</span>
             </div>
             <div className="flow">
               <ArrowUp aria-hidden="true" size={14} />
@@ -442,8 +448,8 @@ export default function Home() {
           </div>
           <p>
             مخزن‌های عمومی محل انتشار تدریجی قراردادها، مستندات و ابزارهای
-            ادغام‌اند. وضعیت واقعی هر مورد، از «در حال تدوین» تا «قابل استفاده»،
-            در همان مخزن اعلام می‌شود.
+            ادغام‌اند. وضعیت واقعی هر مورد با واژگان maturity مشترک (Scaffold، Experimental،
+            Alpha، Beta، Stable، Deprecated و Planned) در همان مخزن و evidence اجرایی سنجیده می‌شود.
           </p>
         </div>
         <div className="repo-grid">

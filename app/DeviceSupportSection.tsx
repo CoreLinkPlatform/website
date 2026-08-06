@@ -71,9 +71,9 @@ export default function DeviceSupportSection() {
         <div className="device-support-head">
           <div>
             <div className="section-label">Device compatibility <span>03</span></div>
-            <h2>یک زبان مشترک برای هزاران دستگاه متصل.</h2>
+            <h2>یک مدل مشترک برای دستگاه‌ها و پروتکل‌های ناهمگون.</h2>
           </div>
-          <p>لایه سازگاری CoreLink داده‌های ناهمگون دستگاه‌ها را به مدل‌های پایدار موقعیت، تله‌متری، رویداد، فرمان و رسانه تبدیل می‌کند. محصول شما با یک قرارداد واحد کار می‌کند، حتی وقتی سخت‌افزار و پروتکل تغییر می‌کند.</p>
+          <p>هدف لایه سازگاری CoreLink تبدیل داده‌های ناهمگون به مدل‌های نسخه‌دار محصول است. فهرست پایین نمونه‌ای از دسته‌ها و رابط‌های قابل ارزیابی است؛ پشتیبانی هر دستگاه فقط پس از validation همان پروفایل ادعا می‌شود.</p>
         </div>
 
         <div className="support-stage">
@@ -84,8 +84,8 @@ export default function DeviceSupportSection() {
             <b>CoreLink</b>
           </div>
           <div className="support-stats" aria-label="آمار پوشش دستگاه و پروتکل">
-            <Counter target={250} suffix="+" label="پروتکل و خانواده پروتکلی" />
-            <Counter target={15000} suffix="+" label="مدل و پیکربندی دستگاه" />
+            <Counter target={protocols.length} suffix="" label="رابط و پروتکل نمونه در این صفحه" />
+            <Counter target={deviceGroups.length} suffix="" label="دسته دستگاه نمونه در این صفحه" />
           </div>
           <div className="signal-ring ring-a" /><div className="signal-ring ring-b" /><div className="signal-ring ring-c" />
         </div>
