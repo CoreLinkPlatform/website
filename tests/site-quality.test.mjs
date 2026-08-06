@@ -4,7 +4,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-const root = new URL("../", import.meta.url);
 const out = new URL("../out/", import.meta.url);
 
 async function walk(directory) {
