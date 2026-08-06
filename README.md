@@ -1,43 +1,38 @@
 # CoreLink Platform Website
 
-Official website for [CoreLink Platform](https://corelinkplatform.ir): connected-product infrastructure for devices, applications, and digital services.
+Official website for [CoreLink Platform](https://corelinkplatform.ir).
 
-## Stack
+## Supported production path
 
-- Next.js 16 / React 19 / TypeScript
-- Static export (`output: "export"`)
-- GitHub Actions deployment to GitHub Pages
-- No runtime server or database dependency
+**GitHub Pages is the only supported production deployment path.**
+
+- Runtime: static export from Next.js 16 / React 19 / TypeScript.
+- Build: `npm ci && npm run build`.
+- Artifact: `out/`.
+- Deployment: `.github/workflows/deploy-pages.yml` on `main`.
+- Production has no application server or database dependency.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback.
 
 ## Local development
 
 ```bash
 npm ci
 npm run dev
+npm run build
 ```
 
-## Verify the GitHub Pages build
+## Internal preview tooling
 
-```bash
-npm run build:github
-```
-
-The deployable static site is generated in `out/`.
-
-## GitHub Pages deployment
-
-The workflow at `.github/workflows/deploy-pages.yml` builds and deploys every push to `main`.
-
-In the GitHub repository settings:
-
-1. Open **Settings → Pages**.
-2. Set **Source** to **GitHub Actions**.
-3. Ensure the custom domain is `corelinkplatform.ir`.
-4. Point the domain DNS records to GitHub Pages, then enable **Enforce HTTPS** after verification.
+The `*:sites` scripts and their Vinext/Wrangler/Vite/Cloudflare dependencies are
+retained only for internal preview/tooling experiments. They are **not** a
+supported CoreLink production deployment path and must not be used as release
+evidence for this website.
 
 ## Public developer resources
 
 - [API Contracts](https://github.com/CoreLinkPlatform/api-contracts)
+- [TypeScript SDK](https://github.com/CoreLinkPlatform/sdk-typescript)
 - [Python SDK](https://github.com/CoreLinkPlatform/sdk-python)
 - [Java SDK](https://github.com/CoreLinkPlatform/sdk-java)
 - [CLI](https://github.com/CoreLinkPlatform/cli)
