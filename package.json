@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test:sites": "npm run build:sites && node --test tests/sites-worker.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "build:sites": "bash scripts/build-verified.sh",
