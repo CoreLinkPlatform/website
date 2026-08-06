@@ -6,14 +6,14 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "install:ci": "bash scripts/install-ci.sh",
     "dev": "next dev",
-    "build": "bash scripts/build-verified.sh",
-    "build:github": "next build",
-    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "build": "next build",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
+    "build:sites": "bash scripts/build-verified.sh",
+    "start:sites": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "install:sites": "bash scripts/install-ci.sh",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {
