@@ -31,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-next-${{ hashFiles('package-lock.json') }}-
       - run: npm ci
-      - run: npm run build:github
+      - run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
       - uses: actions/upload-pages-artifact@v3
