@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -57,7 +58,7 @@ test("production HTML has no unreviewed analytics tracker", async () => {
 
 test("static artifact stays inside release performance budgets", async () => {
   const htmlBytes = (await stat(new URL("index.html", out))).size;
-  const staticDir = path.fileURLToPath(new URL("_next/static/", out));
+  const staticDir = fileURLToPath(new URL("_next/static/", out));
   const files = await walk(staticDir);
 
   let jsBytes = 0;
