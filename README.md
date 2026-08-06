@@ -1,45 +1,50 @@
 # CoreLink Platform Website
 
-Official website for [CoreLink Platform](https://corelinkplatform.ir): connected-product infrastructure for devices, applications, and digital services.
+Official website for [CoreLink Platform](https://corelinkplatform.ir).
 
-## Stack
+## Supported production path
 
-- Next.js 16 / React 19 / TypeScript
-- Static export (`output: "export"`)
-- GitHub Actions deployment to GitHub Pages
-- No runtime server or database dependency
+**GitHub Pages is the only supported production deployment path.**
+
+- Runtime: static export from Next.js 16 / React 19 / TypeScript.
+- Build: `npm ci && npm run build`.
+- Artifact: `out/`.
+- Deployment: `.github/workflows/deploy-pages.yml` on `main`.
+- Production has no application server or database dependency.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback.
 
 ## Local development
 
 ```bash
 npm ci
 npm run dev
+npm run build
 ```
 
-## Verify the GitHub Pages build
+## Internal preview tooling
 
-```bash
-npm run build:github
-```
+The `*:sites` scripts and their Vinext/Wrangler/Vite/Cloudflare dependencies are
+retained only for internal preview/tooling experiments. They are **not** a
+supported CoreLink production deployment path and must not be used as release
+evidence for this website.
 
-The deployable static site is generated in `out/`.
+## Public capability claims
 
-## GitHub Pages deployment
+Public maturity follows executable repository/runtime evidence, not roadmap
+intent. Use only: **Scaffold, Experimental, Alpha, Beta, Stable, Deprecated,
+Planned**.
 
-The workflow at `.github/workflows/deploy-pages.yml` builds and deploys every push to `main`.
+Current public boundary:
 
-In the GitHub repository settings:
+- [API Contracts](https://github.com/CoreLinkPlatform/api-contracts): Alpha,
+  `1.0.0-draft`, public Device + Command slice and canonical event envelope.
+- [TypeScript SDK](https://github.com/CoreLinkPlatform/sdk-typescript): Prerelease Alpha.
+- [Python SDK](https://github.com/CoreLinkPlatform/sdk-python): Prerelease Alpha.
+- [Java SDK](https://github.com/CoreLinkPlatform/sdk-java): Scaffold / Planned.
+- [CLI](https://github.com/CoreLinkPlatform/cli): Scaffold / Planned.
+- [MCP Server](https://github.com/CoreLinkPlatform/mcp-server): Scaffold / Planned.
+- [Mock Server](https://github.com/CoreLinkPlatform/mock-server): Scaffold / Planned.
 
-1. Open **Settings → Pages**.
-2. Set **Source** to **GitHub Actions**.
-3. Ensure the custom domain is `corelinkplatform.ir`.
-4. Point the domain DNS records to GitHub Pages, then enable **Enforce HTTPS** after verification.
-
-## Public developer resources
-
-- [API Contracts](https://github.com/CoreLinkPlatform/api-contracts)
-- [Python SDK](https://github.com/CoreLinkPlatform/sdk-python)
-- [Java SDK](https://github.com/CoreLinkPlatform/sdk-java)
-- [CLI](https://github.com/CoreLinkPlatform/cli)
-- [MCP Server](https://github.com/CoreLinkPlatform/mcp-server)
-- [Mock Server](https://github.com/CoreLinkPlatform/mock-server)
+A device/protocol shown on the site is an evaluation candidate, not a support
+claim. Device compatibility requires profile-specific validation evidence.
