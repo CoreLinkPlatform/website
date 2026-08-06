@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     template: "%s | CoreLink Platform",
   },
   description: "CoreLink دستگاه‌ها و پروتکل‌های مختلف را به یک مدل داده و API پایدار متصل می‌کند تا ساخت محصولات ناوگان، IoT و White-label سریع‌تر و قابل‌گسترش‌تر شود.",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   other: {
     "codex-preview": "development",
     "theme-color": "#0B1F3A",
@@ -39,7 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#top">پرش به محتوای اصلی</a>
+        {children}
+      </body>
     </html>
   );
 }
