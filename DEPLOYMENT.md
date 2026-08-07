@@ -12,7 +12,8 @@ From a clean checkout with Node 22.13 or newer:
 
 ```bash
 npm ci
-npm run build
+npm run lint
+npm test
 test -d out
 ```
 
@@ -27,8 +28,8 @@ production deployment/rollback procedure.
 
 Before accepting a website release:
 
-1. build the exact commit with `npm ci && npm run build`;
-2. run repository checks;
+1. build and test the exact commit with `npm ci && npm run lint && npm test`;
+2. verify the accessibility, performance, SEO and privacy gates in [QUALITY_GATES.md](QUALITY_GATES.md);
 3. review public maturity/device/SDK claims against repository/runtime evidence;
 4. merge through review;
 5. retain the successful GitHub Pages run URL and deployed commit.
