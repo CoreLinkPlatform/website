@@ -4,7 +4,7 @@ Official website for [CoreLink Platform](https://corelinkplatform.ir).
 
 ## Supported production path
 
-**GitHub Pages is the only supported production deployment path.**
+**GitHub Pages is the supported production deployment path for this website.**
 
 - Runtime: static export from Next.js 16 / React 19 / TypeScript.
 - Build: `npm ci && npm run build`.
@@ -12,9 +12,7 @@ Official website for [CoreLink Platform](https://corelinkplatform.ir).
 - Deployment: `.github/workflows/deploy-pages.yml` on `main`.
 - Production has no application server or database dependency.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence and rollback, and
-[QUALITY_GATES.md](QUALITY_GATES.md) for accessibility, performance, SEO and
-analytics-privacy acceptance.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence/rollback, [QUALITY_GATES.md](QUALITY_GATES.md) for accessibility/performance/SEO/analytics-privacy acceptance, and [PUBLIC_CAPABILITY_STATUS.md](PUBLIC_CAPABILITY_STATUS.md) for the public claim inventory.
 
 ## Local development
 
@@ -27,17 +25,21 @@ npm test
 
 ## Internal preview tooling
 
-The `*:sites` scripts and their Vinext/Wrangler/Vite/Cloudflare dependencies are
-retained only for internal preview/tooling experiments. They are **not** a
-supported CoreLink production deployment path and must not be used as release
-evidence for this website.
+The `*:sites` scripts and Vinext/Wrangler/Vite/Cloudflare-related dependencies are retained only for internal preview/tooling experiments. They are **not** a supported CoreLink production deployment path and must not be used as website release evidence.
 
-## Public developer resources
+## Public product/developer resources
 
+- [CoreLink Console](https://github.com/CoreLinkPlatform/Console) — Alpha hosted SaaS frontend; live journeys remain compatibility/acceptance-gated.
+- [Developer Documentation](https://github.com/CoreLinkPlatform/developer-docs)
 - [API Contracts](https://github.com/CoreLinkPlatform/api-contracts)
 - [TypeScript SDK](https://github.com/CoreLinkPlatform/sdk-typescript)
 - [Python SDK](https://github.com/CoreLinkPlatform/sdk-python)
-- [Java SDK](https://github.com/CoreLinkPlatform/sdk-java)
-- [CLI](https://github.com/CoreLinkPlatform/cli)
-- [MCP Server](https://github.com/CoreLinkPlatform/mcp-server)
-- [Mock Server](https://github.com/CoreLinkPlatform/mock-server)
+- [Java SDK](https://github.com/CoreLinkPlatform/sdk-java) — Scaffold/Planned
+- [CLI](https://github.com/CoreLinkPlatform/cli) — Scaffold/Planned
+- [MCP Server](https://github.com/CoreLinkPlatform/mcp-server) — Scaffold/Planned
+- [Mock Server](https://github.com/CoreLinkPlatform/mock-server) — Scaffold/Planned
+- [Repository Maturity](https://github.com/CoreLinkPlatform/.github/blob/main/REPOSITORY_MATURITY.md)
+
+## Claim policy
+
+Website copy must not turn repository visibility, generated code, demo UI, merged implementation or a release tag into a stronger support claim than the authoritative contract/repository/release evidence. Use the shared maturity vocabulary: Scaffold, Experimental, Alpha, Beta, Stable, Deprecated, Planned.
