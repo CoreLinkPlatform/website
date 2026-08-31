@@ -1,5 +1,11 @@
 # CoreLink Platform Website
 
+[![CI](https://github.com/CoreLinkPlatform/website/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CoreLinkPlatform/website/actions/workflows/ci.yml)
+[![GitHub Pages](https://github.com/CoreLinkPlatform/website/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/CoreLinkPlatform/website/actions/workflows/deploy-pages.yml)
+[![Production: GitHub Pages](https://img.shields.io/badge/production-GitHub%20Pages-blue)](https://corelinkplatform.ir)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
+
 Official website for [CoreLink Platform](https://corelinkplatform.ir).
 
 ## Supported production path
