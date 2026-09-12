@@ -2,11 +2,13 @@
 
 [![CI](https://github.com/CoreLinkPlatform/website/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CoreLinkPlatform/website/actions/workflows/ci.yml)
 [![GitHub Pages](https://github.com/CoreLinkPlatform/website/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/CoreLinkPlatform/website/actions/workflows/deploy-pages.yml)
-[![Production: GitHub Pages](https://img.shields.io/badge/production-GitHub%20Pages-blue)](https://corelinkplatform.ir)
+[![Production: GitHub Pages](https://img.shields.io/badge/production-GitHub%20Pages-blue)](https://link.coreplatform.ir)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
 
-Official website for [CoreLink Platform](https://corelinkplatform.ir).
+Official website for [CoreLink](https://link.coreplatform.ir), part of the [Core Platform](https://coreplatform.ir) family.
+
+`corelinkplatform.ir` is a legacy domain and should redirect permanently to `https://link.coreplatform.ir` at the edge/DNS provider layer.
 
 ## Supported production path
 
@@ -16,6 +18,7 @@ Official website for [CoreLink Platform](https://corelinkplatform.ir).
 - Build: `npm ci && npm run build`.
 - Artifact: `out/`.
 - Deployment: `.github/workflows/deploy-pages.yml` on `main`.
+- Canonical production hostname: `link.coreplatform.ir`.
 - Production has no application server or database dependency.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for release evidence/rollback, [QUALITY_GATES.md](QUALITY_GATES.md) for accessibility/performance/SEO/analytics-privacy acceptance, and [PUBLIC_CAPABILITY_STATUS.md](PUBLIC_CAPABILITY_STATUS.md) for the public claim inventory.
@@ -35,6 +38,8 @@ The `*:sites` scripts and Vinext/Wrangler/Vite/Cloudflare-related dependencies a
 
 ## Public product/developer resources
 
+- [Core Platform](https://coreplatform.ir) — parent product family.
+- [Core Signal](https://signal.coreplatform.ir) — signal/detection product in the same family.
 - [CoreLink Console](https://github.com/CoreLinkPlatform/Console) — Alpha hosted SaaS frontend; live journeys remain compatibility/acceptance-gated.
 - [Developer Documentation](https://github.com/CoreLinkPlatform/developer-docs)
 - [API Contracts](https://github.com/CoreLinkPlatform/api-contracts)

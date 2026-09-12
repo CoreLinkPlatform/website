@@ -2,9 +2,13 @@
 
 ## Decision
 
-The supported production target for `corelinkplatform.ir` is **GitHub Pages**.
+The supported production target for `link.coreplatform.ir` is **GitHub Pages**.
 The site is a static Next.js export. No Cloudflare/Vinext/Wrangler runtime is
 part of the production contract.
+
+`corelinkplatform.ir` is retained only as a legacy hostname and should issue a
+permanent redirect to `https://link.coreplatform.ir`. It must not be configured
+as a second GitHub Pages custom domain for this repository.
 
 ## Reproducible build
 
@@ -31,8 +35,10 @@ Before accepting a website release:
 1. build and test the exact commit with `npm ci && npm run lint && npm test`;
 2. verify the accessibility, performance, SEO and privacy gates in [QUALITY_GATES.md](QUALITY_GATES.md);
 3. review public maturity/device/SDK claims against repository/runtime evidence;
-4. merge through review;
-5. retain the successful GitHub Pages run URL and deployed commit.
+4. verify GitHub Pages reports `link.coreplatform.ir` as the custom domain;
+5. verify `corelinkplatform.ir` returns a permanent redirect to `https://link.coreplatform.ir`;
+6. merge through review;
+7. retain the successful GitHub Pages run URL and deployed commit.
 
 ## Rollback
 
