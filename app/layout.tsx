@@ -3,7 +3,7 @@ import "@fontsource-variable/vazirmatn";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://corelinkplatform.ir"),
+  metadataBase: new URL("https://link.coreplatform.ir"),
   title: {
     default: "CoreLink Platform | زیرساخت محصولات متصل",
     template: "%s | CoreLink Platform",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CoreLink Platform | زیرساخت محصولات متصل",
     description: "یک هسته مشترک برای اتصال دستگاه، یکپارچه‌سازی داده و ساخت محصولات ناوگان، IoT و White-label.",
-    url: "https://corelinkplatform.ir",
+    url: "https://link.coreplatform.ir",
     siteName: "CoreLink Platform",
     locale: "fa_IR",
     type: "website",
