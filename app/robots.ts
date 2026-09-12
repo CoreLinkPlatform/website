@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://corelinkplatform.ir/sitemap.xml",
+    sitemap: "https://link.coreplatform.ir/sitemap.xml",
   };
 }
