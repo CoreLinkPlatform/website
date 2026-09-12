@@ -39,11 +39,11 @@ test("static export contains canonical SEO discovery metadata", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", out), "utf8");
 
   assert.match(html, /<meta(?=[^>]*\bname=["']description["'])(?=[^>]*\bcontent=["'][^"']{40,}["'])[^>]*>/i);
-  assert.match(html, /<link(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']https:\/\/corelinkplatform\.ir\/?["'])[^>]*>/i);
+  assert.match(html, /<link(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']https:\/\/link\.coreplatform\.ir\/?["'])[^>]*>/i);
   assert.match(html, /<meta(?=[^>]*\bproperty=["']og:title["'])[^>]*>/i);
   assert.match(html, /<meta(?=[^>]*\bname=["']robots["'])(?=[^>]*\bcontent=["'][^"']*index[^"']*follow[^"']*["'])[^>]*>/i);
-  assert.match(robots, /Sitemap:\s*https:\/\/corelinkplatform\.ir\/sitemap\.xml/i);
-  assert.match(sitemap, /<loc>https:\/\/corelinkplatform\.ir<\/loc>/i);
+  assert.match(robots, /Sitemap:\s*https:\/\/link\.coreplatform\.ir\/sitemap\.xml/i);
+  assert.match(sitemap, /<loc>https:\/\/link\.coreplatform\.ir<\/loc>/i);
 });
 
 test("production HTML has no unreviewed analytics tracker", async () => {
